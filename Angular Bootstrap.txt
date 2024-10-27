@@ -1,0 +1,30 @@
+# install bootstrap with dependencies
+>npm install bootstrap@4.0.0-beta.2 jquery popper.js
++ bootstrap@4.0.0-beta.2
++ popper.js@1.14.3
++ jquery@3.3.1
+
+>> "bootstrap": "4.0.0-beta.2", ===> stop the auto update
+
+> "styles": "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+> "scripts": [
+	"../node_modules/jquery/dist/jquery.js",
+	"../node_modules/popper.js/dist/umd/popper.js",
+	"../node_modules/bootstrap/dist/js/bootstrap.js"
+    ]
+
+
+> npm install bootstrap   安装bootstrap模块和jQuery JS
+angular.json 在文件中添加样式文件的路径 (找node modules中的相对路径)，最后重启Server
+ "styles": [
+       "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+ ],
+
+https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application/
+https://www.techiediaries.com/angular-bootstrap/
+
+
+# install icons
+> npm install font-awesome --save
+https://material.io/tools/icons/?search=linkedin&icon=question_answer&style=baseline

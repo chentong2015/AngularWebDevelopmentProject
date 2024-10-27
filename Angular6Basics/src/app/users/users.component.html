@@ -1,0 +1,9 @@
+<div class="card" *ngFor = "let user of Users">
+  <h5 class="card-header"> User {{ user.id }} </h5>
+  <div class="card-body">
+    <a class="card-title" routerLink="/details/{{user.id}}" >{{ user.name }} </a>
+    <p class="card-text"> {{ user.address.city }}, {{ user.address.street }}, {{ user.address.suite }}</p>
+    <a class="btn btn-primary" href="http://{{ user.website }}"> Page Web </a>
+  </div>
+  <br>
+</div>

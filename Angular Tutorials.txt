@@ -1,0 +1,33 @@
+项目结构介绍
+https://www.freecodecamp.org/news/how-to-install-angular-on-windows-a-guide-to-angular-cli-node-js-and-build-tools/
+
+提交表单的样式
+https://mdbootstrap.com/docs/standard/extended/bootstrap-survey-form/
+https://mdbootstrap.com/docs/standard/extended/login/
+
+JWT Authentication in Typescript 关于token的研究
+https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-express-3gb1
+https://www.npmjs.com/package/typescript-cookie
+https://github.com/hmoog/crypto-ts
+
+关于Http的高级内容
+https://blog.angular-university.io/angular-http/
+https://angular.io/tutorial/toh-pt6
+https://angular.io/guide/http
+
+Full Tutorial Course
+https://www.youtube.com/watch?v=2OHbjep_WjQ
+
+Login and Logout using Token
+https://www.youtube.com/watch?v=e8BlURn6SFk
+
+Angular Scroll
+https://github.com/oblador/angular-scroll
+
+Angular Google maps
+https://angular-maps.com/
+
+Angular图形视图
+https://www.jqwidgets.com/angular-cli-and-jqwidgets-angular-components/
+https://www.jqwidgets.com/angular/angular-chart/angular-chart-chartwithtabs.htm
+https://www.jqwidgets.com/angular-components-documentation/documentation/angular-cli/angular-cli-jqxchart.htm?search=

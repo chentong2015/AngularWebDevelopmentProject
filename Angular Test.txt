@@ -1,0 +1,21 @@
+# start proxy
+>npm start
+set proxy  ==> remote server request !!!!
+> add to package.json :::  <"start": "ng serve --proxy-config proxyconfig.json">
+
+Access route to page web
+https://angular-2-training-book.rangle.io/v/v2.3/handout/routing/route_guards.html
+
+Angular range slider:
+https://www.npmjs.com/package/ion-rangeslider
+https://github.com/PhilippStein/ng2-ion-range-slider
+https://github.com/IonDen/ion.rangeSlider
+http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
+
+Angular Chart Demo:
+https://github.com/jtblin/angular-chart.js/blob/master/README.md
+http://jtblin.github.io/angular-chart.js/
+
+https://www.jqwidgets.com/angular/angular-chart/angular-chart-colorbands.htm
+
+https://medium.com/@swarnakishore/how-to-include-and-use-jquery-in-angular-cli-project-592e0fe63176

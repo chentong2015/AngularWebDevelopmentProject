@@ -1,0 +1,57 @@
+﻿环境的搭建
+>brew install node   MacOS直接安装Node Js
+https://nodejs.org/en/  下载之后直接安装  Node.js中包含Node Package Manger = npm
+
+cmd > node -v 检查安装的正确版本
+cmd> npm -v 检查版本
+https://stackoverflow.com/questions/39566257/how-to-uninstall-upgrade-angular-cli 
+ 
+https://docs.npmjs.com/cli/v6/commands/npm-install 
+>npm uninstall -g @angular/cli   使用 command来安装command line interface 全局的安装
+>npm install -g @angular/cli     使用npm来安装指定的package
+
+>npm install @angular/animations@latest –save  使用npm来安装需要的模块
+>npm install -g angular-cli-ghpages    
+>npm install angular-image-slider –save
+>npm i rxjs
+
+>ng version | ng v  输出安装后的版本信息, 默认包含一些基础的packages
+
+>npm set audit false
+>npm install -g npm@9.4.2  升级NPM的版本
+
+将所有的component都创建到/components目录下
+>ng new project_name 创建项目
+>ng new Project_Name --style=scss –routing  指定使用的样式文件和添加路由 !!
+
+>cd project_name
+>ng g component components/user  
+>ng g component components/about 
+>ng g c test_component 组件名称可以缩写成c
+>ng g service services/data 
+>ng serve 启动服务   启动之后，动态的相应页面的变化 http://localhost:4200/ 默认端口4200
+>Ctrl+C结束运行
+
+# build / publish site web 构建并发布web项目
+> ng build
+> ng build --prod
+> ng build --prod --base-href="myurl"
+> ng build --prod --base-href="https://name.github.io.ng5/" 设置要部署的网站
+> ng build --prod --base-href=https://chen2016tong.github.io/AngularApp/
+
+根据Angular.json文件中配置的build参数生成到指定目录 
+ "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/demo1",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+ }

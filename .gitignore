@@ -1,0 +1,24 @@
+# See http://help.github.com/ignore-files/ for more ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Dependencies
+/node_modules
+
+# IDEs and editors
+.idea/*
+AngularWebDevelopment.iml
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+Thumbs.db

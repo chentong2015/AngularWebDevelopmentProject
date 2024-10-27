@@ -1,0 +1,28 @@
+<ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <!-- Set the class according to the current url --> 
+      <a routerLink="" class="nav-link active" [class.active]="currentBarUrl == '/'"> 
+        <i class="material-icons">supervised_user_circle</i> User information 
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="posts" class="nav-link" [class.active]="currentBarUrl == '/posts'"> 
+        <i class="material-icons">message</i> Messages <span class='air'> 3 </span> 
+      </a> 
+    </li>
+    <li class="nav-item">
+      <a routerLink="details/:" class="nav-link active" [class.active]="currentBarUrl == '/details'"> 
+        <i class="material-icons">collections</i> Collections <span class='air'> 10 </span> </a>   
+    </li>
+    <li class="nav-item">
+      <a routerLink="" class="nav-link" > 
+        <i class="material-icons">add_shopping_cart</i> Shopping 
+        <span class="badge badge-primary badge-pill">14</span>
+      </a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="" class="nav-link"> 
+          <i class="material-icons">history</i> History 
+        </a>
+      </li>
+</ul>
