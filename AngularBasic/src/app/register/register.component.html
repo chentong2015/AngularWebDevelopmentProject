@@ -1,0 +1,17 @@
+<div class="div-register">
+    <h5>Register here: </h5>
+    <form (submit)="registerUser($event)">
+        <input type="text" placeholder="username" class="form-control" id="username">
+        <p></p>
+        <input type="password" placeholder="password" class="form-control" id="password">
+        <p></p>
+        <input type="text" placeholder="email" class="form-control" id="email">
+
+        <div>
+            <input type="checkbox" id="registerCheck" checked>
+            <label for="registerCheck">I have read and agree to the terms</label>
+        </div>
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-register">Register</button>
+    </form>
+</div>

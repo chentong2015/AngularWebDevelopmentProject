@@ -1,0 +1,23 @@
+
+<div class="div-report-table">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Question</th>
+                <th scope="col">Answer</th>
+                <th scope="col">Your choose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let question of questions; let id= index">
+                <td>{{id + 1}}</td>
+                <th>{{question.name}}</th>
+                <th>{{question.answers[question.answerId]}}</th>
+                <th>{{question.answers[question.selectedId]}}</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 class="h4-result"> Result: {{countCorrectAnswers}} / {{questions.length}}</h4>
+</div>

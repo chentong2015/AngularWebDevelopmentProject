@@ -1,0 +1,49 @@
+<div>
+<h3>Welcome {{name}}</h3>
+
+<ul>
+    <li>Age: {{age}}</li>
+    <li>Title: {{title}}</li>
+    <li>Address: {{address.city}} - {{address.street}}</li>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="editUserInfo()">Edit</button>
+
+<div *ngIf=isEditingUser>
+   <h5>Edit user info</h5>
+   <form>
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+        <label for="age">Age: </label>
+        <input type="number" [(ngModel)]="age" name="age">
+    </div>
+    <div>
+        <label for="city">City: </label>
+        <input type="text" [(ngModel)]="address.city" name="city">
+    </div>
+    <div>
+        <label for="street">Street: </label>
+        <input type="text" [(ngModel)]="address.street" name="street">
+    </div>
+   </form>
+  
+</div>
+
+<h3>Add new course</h3>
+<form (submit)="addCourse(course.value)">
+    <label for="course"> new course name: </label>
+    <input type="text" #course>
+</form>
+
+<h3>Courses List: </h3>
+<ul>
+ <li *ngFor = "let course of courses; let id = index">
+     {{id + 1}} : {{course}}
+     <button type="button" class="btn btn-link" (click)="deleteCourse(course)">Delete</button>
+ </li>
+</ul>
+
+</div>

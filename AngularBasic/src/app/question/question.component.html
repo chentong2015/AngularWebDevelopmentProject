@@ -1,0 +1,42 @@
+<div class="progress">
+    <div class="progress-bar" role="progressbar" [style.width]="percentWidth" aria-valuenow="25" 
+      aria-valuemin="0" aria-valuemax="100"> {{percent}} %</div>
+  </div>
+
+<div class="div-question">
+  <p class="fw-bold"> {{currentQuesiton.name}}</p>
+
+  <div class="form-check">
+    <input type="radio" class="form-check-input" name="radioInput" id="answer1"
+           [checked]="currentQuesiton.selectedId == 0" (click)="updateAnswer(0)">
+    <label class="form-check-label" for="answer1"> {{currentQuesiton.answers[0]}} </label>
+  </div>
+
+  <div class="form-check">
+    <input type="radio" class="form-check-input" name="radioInput" id="answer2"
+           [checked]="currentQuesiton.selectedId == 1" (click)="updateAnswer(1)">
+    <label class="form-check-label" for="answer2"> {{currentQuesiton.answers[1]}} </label>
+  </div>
+  
+  <div class="form-check">
+    <input type="radio" class="form-check-input" name="radioInput" id="answer3"
+           [checked]="currentQuesiton.selectedId == 2" (click)="updateAnswer(2)">
+    <label class="form-check-label" for="answer3"> {{currentQuesiton.answers[2]}} </label>
+  </div>
+
+  <div class="form-check">
+    <input type="radio" class="form-check-input" name="radioInput" id="answer4"
+           [checked]="currentQuesiton.selectedId == 3" (click)="updateAnswer(3)">
+    <label class="form-check-label" for="answer4"> {{currentQuesiton.answers[3]}} </label>
+  </div>
+
+</div>
+
+<div *ngIf="!isFirstQuestion()" style="float: left;"> 
+    <button type="button" class="btn btn-secondary btn-previous" (click)="previousQuestion()">previous</button>
+</div>
+
+<button type="button" class="btn btn-success btn-next" (click)="nextQuestion()">
+    <span *ngIf="isLastQuestion()">submit</span>
+    <span *ngIf="!isLastQuestion()">next</span>
+</button>

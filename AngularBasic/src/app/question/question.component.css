@@ -1,0 +1,20 @@
+.progress{
+    margin: 20px;
+}
+
+.div-question {
+    margin-left: 20px;
+}
+
+.btn-previous {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 100px;
+}
+
+.btn-next {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100px;
+}
