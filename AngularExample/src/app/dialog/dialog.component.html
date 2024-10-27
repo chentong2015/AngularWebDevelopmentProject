@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h2>{{title}}</h2>
+</div>
+
+<div class="modal-body">{{body}}</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-dark" (mousedown)="close()">Close</button>
+
+    <!-- 通过参数判断这里是否需要  添加Confirm按钮 -->
+    <div *ngIf=hasConfirmButton>
+        <button type="submit" class="btn btn-primary" (click)="confirm()">Confirm</button>
+    </div>
+</div>

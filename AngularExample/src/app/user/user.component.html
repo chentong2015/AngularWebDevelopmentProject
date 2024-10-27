@@ -1,0 +1,54 @@
+<div class="user-page">
+  <!-- 直接使用在TypeScript中定义的属性 > 通过方法来动态修改，自定义动态的页面效果 -->
+  <h3> Welcome: {{name}}</h3>
+  <ul>
+    <li> Age: {{age}} </li>
+    <li> Title: {{title}} </li>
+    <li> Address : {{address.street}} - {{address.city}} </li>
+  </ul>
+
+  <!-- 点击调用ts中定义的方法 -->
+  <button type="button" class="btn btn-primary" (click) = "editUserCources()">Edit User</button>
+
+  <!-- ngModel配置属性的双向绑定 two-way binding
+      web更新修改的值会自动流到ts中的属性的值 -->
+  <div *ngIf=isEditingUser>
+    <h5>Edit user Info</h5>
+    <form>
+      <div>
+        <label for="name">Name : </label> <br>
+        <input type="text" [(ngModel)]="name" name="name">
+      </div>
+      <div>
+        <label for="age">Age : </label> <br>
+        <input type="number" [(ngModel)]="age" name="age">
+      </div>
+      <div>
+        <label for="street">Street : </label> <br>
+        <input type="text" [(ngModel)]="address.street" name="street">
+      </div>
+      <div>
+        <label for="city">City : </label> <br>
+        <input type="text" [(ngModel)]="address.city" name="city">
+      </div>
+    </form>
+  </div>
+
+  <h3>Add new course:</h3>
+  <form (submit)="addCourse(course.value)">
+    <div>
+      <label for="course"> New Name: </label>
+      <input type="text" #course>
+    </div>
+  </form>
+
+  <h3>My Courses List: </h3>
+  <ul>
+    <!-- 将所有的Courses显示出来 -->
+    <li *ngFor = "let course of courses; let id = index"> 
+      {{id+1}} : {{course}} 
+      <button type="button" class="btn btn-link" (click) = "deleteCourse(course)"> Delete </button>
+    </li>
+  </ul>
+
+</div>

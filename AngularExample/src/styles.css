@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* 全局的CSS样式配置文件 the global stylesheet file for the project */
+/* 在这里需要引入bootstrap css样式文件 */
+@import "~bootstrap/dist/css/bootstrap.css"

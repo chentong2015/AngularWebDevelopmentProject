@@ -1,0 +1,18 @@
+<div class="div-register">
+    <h5> Register Here </h5>
+    <!-- 区别于login, 这里传递的是event事件 -->
+    <form (submit)="regiserUser($event)">
+        <input type="text" placeholder="usename" class="form-control" id="username"> 
+        <p></p>
+        <input type="email" placeholder="email" class="form-control" id="email">
+        <p></p>
+        <input type="password" placeholder="password" class="form-control" id="password">
+        <p></p>
+        <div>
+            <input type="checkbox" id="registerCheck" checked />
+            <label for="registerCheck"> I have read and agree to the terms </label>
+        </div>
+        <p></p>
+        <button type="submit" class="btn btn-primary btn-register">Register</button>
+    </form>
+  </div>

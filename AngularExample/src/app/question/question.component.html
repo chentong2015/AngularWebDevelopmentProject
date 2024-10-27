@@ -1,0 +1,42 @@
+
+<div class="progress">
+    <!-- 设置样式随着属性值的变化而变化 -->
+    <div class="progress-bar" role="progressbar" [style.width]="percentWidth" 
+    aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"> {{percent}}%</div>
+</div>
+
+<div class="div-question">
+    <p class="fw-bold">{{currentQuestion.name}}</p>
+
+    <!-- 1. 这里Redio的全面name名称保持一致才能保证是单选的效果 -->
+    <!-- 2. 当加载当前问题的时候，则自动的加载选择的答案Index -->
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radioInput" id="answer1" 
+             [checked]="currentQuestion.selectedId == 0" (click)="updateAnswer(0)"/>
+      <label class="form-check-label" for="answer1"> {{ currentQuestion.answers[0] }} </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radioInput" id="anwer2" 
+             [checked]="currentQuestion.selectedId == 1" (click)="updateAnswer(1)"/>
+      <label class="form-check-label" for="anwer2"> {{ currentQuestion.answers[1] }} </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radioInput" id="answer3" 
+             [checked]="currentQuestion.selectedId == 2" (click)="updateAnswer(2)"/>
+      <label class="form-check-label" for="answer3"> {{ currentQuestion.answers[2] }} </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radioInput" id="answer4" 
+             [checked]="currentQuestion.selectedId == 3" (click)="updateAnswer(3)"/>
+      <label class="form-check-label" for="answer4"> {{ currentQuestion.answers[3] }} </label>
+    </div>
+</div>
+
+<div *ngIf="!isFirstQuestion()" style="float: left;">
+  <button type="button" class="btn btn-secondary btn-previous" (click)="previousQuestion()">Previous</button>
+</div>
+
+<button type="button" class="btn btn-success btn-next" (click)="nextQuestion()">
+  <span *ngIf="!isLastQuestion()">Next</span>
+  <span *ngIf="isLastQuestion()">Submit</span> 
+</button>
