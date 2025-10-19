@@ -1,0 +1,49 @@
+方法一：确保开发模式开启
+ng serve
+•	默认开发模式会生成 source map。
+•	不要加 --prod 或 --configuration production。
+
+
+方法二：检查 angular.json 的 sourceMap 配置
+打开 angular.json 找到对应的项目配置：
+"architect": {
+  "build": {
+    "options": {
+      "sourceMap": true
+    }
+  },
+  "serve": {
+    "options": {
+      "sourceMap": true
+    }
+  }
+}
+注意：
+•	"sourceMap": true 会生成全部 source map。
+•	也可以更细粒度控制：
+"sourceMap": {
+  "scripts": true,
+  "styles": true,
+  "vendor": true
+}
+•	确保 "scripts": true，才能在 DevTools 看到 ts 文件。
+
+
+方法三：启动时明确开启 source map
+ng serve --source-map
+
+
+方法四：清除浏览器缓存 & 禁用缓存
+•	打开 DevTools → Network → 勾选 Disable cache → 刷新页面。
+•	确保 DevTools 加载的是最新的 source map。
+
+
+方法五：检查 DevTools 的文件路径
+•	打开 DevTools → Sources → Webpack → webpack:// → src/ 下通常可以看到 .ts 文件。
+•	如果找不到，说明 source map 没生效或路径被 webpack 改写。
+
+
+方法六（如果是生产调试需求）
+•	生产构建默认不生成 source map，可用：
+ng build --source-map
+•	然后把生成的文件部署到服务器再调试。
